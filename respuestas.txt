@@ -1,0 +1,11 @@
+Pregunta 21.
+Con el intérprete de Ruby sólo se muestra el resultado de la ejecución, mientras que con el intérprete interactivo (irb) se muestra cada uno de los comandos a ejecutar con su resultado.
+
+alu1949@cc198:~/prct03$ irb helloworld.rb 
+2.0.0p247 :001 > puts "Hello world"
+Hello world
+ => nil 
+2.0.0p247 :002 > 
+alu1949@cc198:~/prct03$ ruby helloworld.rb 
+Hello world
+
