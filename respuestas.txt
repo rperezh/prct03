@@ -1,4 +1,5 @@
 Pregunta 21.
+============
 Con el intérprete de Ruby sólo se muestra el resultado de la ejecución, mientras que con el intérprete interactivo (irb) se muestra cada uno de los comandos a ejecutar con su resultado.
 
 alu1949@cc198:~/prct03$ irb helloworld.rb 
@@ -8,4 +9,47 @@ Hello world
 2.0.0p247 :002 > 
 alu1949@cc198:~/prct03$ ruby helloworld.rb 
 Hello world
+
+
+
+Pregunta 27.
+============
+Con el intérprete interactivo (irb) se muestra cada uno de los comandos a ejecutar con su resultado, mientras que con Pry sólo se muestra el resultado del comando.
+
+alu1949@cc198:~/prct03$ irb helloworld.rb 
+2.0.0p247 :001 > puts "Hello world"
+Hello world
+ => nil 
+2.0.0p247 :002 >
+alu1949@cc198:~/prct03$ ruby byebyeWorld.rb 
+
+From: /home/alu1949/prct03/byebyeWorld.rb @ line 11 :
+
+     6: 
+     7: #set x to 10
+     8: x = 10
+     9: 
+    10: #start a PEPL session
+ => 11: binding.pry
+    12: 
+    13: #program resumes here (after pry session)
+    14: puts "program resumes here. Value of x is: #{x}."
+
+[1] pry(main)> puts x
+10
+=> nil
+[2] pry(main)> def hello
+[2] pry(main)*   puts "Hello world"
+[2] pry(main)* end  
+=> nil
+[3] pry(main)> hello
+Hello world
+=> nil
+[4] pry(main)> byebye
+bye bye world!!!
+=> nil
+[5] pry(main)> x = "changed"
+=> "changed"
+[6] pry(main)> exit
+program resumes here. Value of x is: changed.
 
